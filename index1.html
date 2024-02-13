@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let array = [1, 2, 3];
+        array.push(4);
+        console.log(array)
+        array.unshift(0);
+        console.log(array);
+        array.push('Плюс новый элемент');
+        console.log(array)
+        array.pop();
+        console.log(array);
+        array.shift();
+        console.log(array);
+        console.log(array.length);
+        let arr = ["t", "e", "s", "t"];
+
+        console.log("Test", arr.slice(1, 3)); // e,s (копирует с 1 до 3)
+
+        console.log(arr.slice(-2)); // s,t (копирует с -2 до конца)
+
+        let arr2 = ["Я", "изучаю", "JavaScript"];
+
+        // с индекса 2
+        // удалить 0 элементов
+        // вставить "сложный", "язык"
+        arr2.splice(2, 0, "сложный", "язык");
+
+        console.log(arr2); // "Я", "изучаю", "сложный", "язык", "JavaScript"
+
+        arr.forEach(function (item, index, array) {
+            // ... делать что-то с item
+        });
+        // Вызов alert для каждого элемента
+        ["Бильбо", "Гэндальф", "Назгул"].forEach(alert);
+        ["Бильбо", "Гэндальф", "Назгул"].forEach((item, index, array) => {
+            alert(`У ${item} индекс ${index} в ${array}`);
+        });
+
+        let arr3 = [1, 0, false];
+
+        alert(arr3.indexOf(0)); // 1
+        alert(arr3.indexOf(false)); // 2
+        alert(arr3.indexOf(null)); // -1
+
+        alert(arr3.includes(1)); // true
+
+        let fruits = ['Яблоко', 'Апельсин', 'Яблоко']
+
+        alert(fruits.indexOf('Яблоко')); // 0 (первый 'Яблоко')
+        alert(fruits.lastIndexOf('Яблоко')); // 2 (последний 'Яблоко')
+
+        const arr4 = [NaN];
+        alert(arr4.indexOf(NaN)); // -1 (неверно, должен быть 0)
+        alert(arr4.includes(NaN));// true (верно)
+
+
+
+    </script>
+
+</body>
+
+</html>
